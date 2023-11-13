@@ -1,0 +1,19 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    box-sizing: border-box;
+}
+
+/* background color for navbar and footer */
+.nav-bg {
+    background-color: rgb(25, 39, 44);
+}
+
+/* aligns navbar items center */
+.navbar {
+    height: 12px;
+    display: flex;
+    align-items: center;
+}
