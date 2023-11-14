@@ -5,7 +5,7 @@
 
 
 
-window.onload = function locationSearch() {
+window.onload = function populateParkNames() {
     const selectLocationEl = document.getElementById("selectNationalPark");
     const selectTypeEl = document.getElementById("selectParkType");
 
@@ -6966,13 +6966,27 @@ window.onload = function locationSearch() {
 
         descriptionEl.innerHTML = "";
 
-        for (let i = 0; i < nationalParksArray.length; i++) {
-            const parkInfo = nationalParksArray[i];
-            if (parkInfo.State === selectedState) {
+        let parksMatchingState = nationalParksArray.filter((park) => {
+            return park.State === selectedState;
+        })
+
+        if (selectedState === "none"){
+            descriptionEl.innerHTML = "No State or Territory Chosen!";
+        } else if(parksMatchingState === 0) {
+            descriptionEl.innerHTML = "No Parks found for the selected location."
+        } else {
+            parksMatchingState.forEach((park) => {
                 let listEl = document.createElement("li");
-                listEl.innerHTML = parkInfo.LocationName;
+                listEl.innerHTML = park.LocationName;
+                listEl.classList.add("text-center");
+                listEl.classList.add("nav-link");
+                listEl.classList.add("fs-4");
+                listEl.classList.add("py-2");
+                listEl.classList.add("my-4");
+                listEl.style.borderBottom = "thin solid #d4d4d4";
+
                 descriptionEl.appendChild(listEl);
-            }
+            });
         }
     }
 
@@ -6981,7 +6995,7 @@ window.onload = function locationSearch() {
         descriptionEl.innerHTML = "";
 
        let parkOfSameType = nationalParksArray.filter((park) => {
-            return park.LocationName.includes(selectedType);
+            return park.LocationName.toLowerCase().includes(selectedType.toLowerCase());
        });
 
        if(parkOfSameType.length === 0){
@@ -6989,11 +7003,16 @@ window.onload = function locationSearch() {
        } else {
         parkOfSameType.forEach((park) => {
             const parkName = park.LocationName;
-            let listEl = document.createElement("li");
-            listEl.innerHTML = parkName;
-            listEl.style.borderBottom = "thin solid #000";
+            let listEl2 = document.createElement("li");
+            listEl2.innerHTML = parkName;
             
-            descriptionEl.appendChild(listEl);
+            listEl2.classList.add("text-center");
+            listEl2.classList.add("nav-link");
+            listEl2.classList.add("fs-4");
+            listEl2.classList.add("py-2");
+            listEl2.classList.add("my-4");
+            listEl2.style.borderBottom = "thin solid #d4d4d4";
+            descriptionEl.appendChild(listEl2);
         })
        }
        
