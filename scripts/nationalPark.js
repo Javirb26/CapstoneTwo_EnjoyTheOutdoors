@@ -6949,19 +6949,15 @@ window.onload = function locationSearch() {
         "Parkway"
     ]
 
-    // Loop through locationsArray to append State/Territories to options
-    for (let i = 0; i < locationsArray.length; i++) {
-        let locationData = locationsArray[i];
-        let locationOptionEl = new Option(locationData);
-        selectLocationEl.appendChild(locationOptionEl);
+    let populateSelect = (selectEl, array) => {
+        for (let i = 0; i < array.length; i++){
+            let optionValue = array[i];
+            let optionEl = new Option(optionValue);
+            selectEl.appendChild(optionEl);
+        }
     }
-
-    // Loop through partTypesArray to append Park Types to options
-    for (let i = 0; i < parkTypesArray.length; i++) {
-        let parkType = parkTypesArray[i];
-        let parkTypeOption = new Option(parkType);
-        selectTypeEl.appendChild(parkTypeOption);
-    }
+    populateSelect(selectLocationEl, locationsArray);
+    populateSelect(selectTypeEl, parkTypesArray);
 
     // Verify if state option and property are equal and add park names as output
     selectLocationEl.onchange = () => {
@@ -6989,12 +6985,14 @@ window.onload = function locationSearch() {
        });
 
        if(parkOfSameType.length === 0){
-        descriptionEl.innerHTML = "No Park type Chosen";
+        descriptionEl.innerHTML = "No Park type Chosen!";
        } else {
         parkOfSameType.forEach((park) => {
             const parkName = park.LocationName;
             let listEl = document.createElement("li");
             listEl.innerHTML = parkName;
+            listEl.style.borderBottom = "thin solid #000";
+            
             descriptionEl.appendChild(listEl);
         })
        }
