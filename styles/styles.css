@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+/* Background Color for Select Element Area */
+.find-bg {
+    background-color: rgb(159, 91, 44);
+}
+
+/* Background Color for main section of all pages*/
+.main-bg {
+    background-color: whitesmoke;
+}
+
 /* background color for navbar and footer */
 .nav-bg {
     background-color: rgb(25, 39, 44);
@@ -18,12 +28,15 @@
     align-items: center;
 }
 
+/* Styles for Hero image container */
 .jumbo-container{
     min-height: 70vh;
     display: flex;
     align-items: flex-end;
 }
 
+/* HERO images for each page */
+/* Home page Hero Image */
 .container-bg-img{
     min-height: 105vh;
     position: relative;
@@ -34,6 +47,7 @@
     padding-right: 8%;
 }
 
+/* National Park Search Page Hero Image */
 .park-map-img{
     min-height: 100vh;
     position: relative;
@@ -44,43 +58,33 @@
     padding-right: 8%;
 }
 
-.hero-text-search{
+/* Mountains Information Page Hero Image */
+.mountain-hero-img{
+    min-height: 95vh;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)), url(/images/mountainClimbing.png);
+    background-size: cover;
+    background-position: center;
+    padding-left: 8%;
+    padding-right: 8%;
+}   
+
+/* Styles for Text within Hero Image area */
+.hero-text{
     height: 40vh;
     display: flex;
     justify-content: center;
     align-items: end;
 }
-
-.hero-text-search h1 {
+/* Styles for h1 in Hero Image Area  */
+.hero-text h1 {
     font-size: 4rem;
 }
 
-.find-bg {
-    background-color: rgb(195, 110, 36);
+/* Right padding for Mountain Select Output */
+.desc-ul {
+    padding-right: 32px;
 }
-
-/* TILT DIVIDER */
-/* .custom-shape-divider-bottom-1699928325 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1699928325 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 83px;
-}
-
-.custom-shape-divider-bottom-1699928325 .shape-fill {
-    fill: #FFFFFF;
-} */
-
 
 /* WAVE DIVIDER FOR SEARCH PAGE */
 .custom-shape-divider-bottom-1699928242 {
@@ -101,5 +105,5 @@
 }
 
 .custom-shape-divider-bottom-1699928242 .shape-fill {
-    fill: #FFFFFF;
+    fill: whitesmoke;
 }
