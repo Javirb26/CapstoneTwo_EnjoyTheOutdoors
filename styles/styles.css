@@ -35,7 +35,7 @@
 .container-bg-img{
     min-height: 105vh;
     position: relative;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/images/parkBg.png);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/parkBg.png);
     background-size: cover;
     background-position: center;
     padding-left: 8%;
@@ -46,7 +46,7 @@
 .park-map-img{
     min-height: 105vh;
     position: relative;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/images/mapOfParks.png);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/mapOfParks.png);
     background-size: cover;
     background-position: center;
     padding-left: 8%;
@@ -57,7 +57,7 @@
 .mountain-hero-img{
     min-height: 105vh;
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)), url(/images/mountainClimbing.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)), url(../images/mountainClimbing.png);
     background-size: cover;
     background-position: center;
     padding-left: 8%;
