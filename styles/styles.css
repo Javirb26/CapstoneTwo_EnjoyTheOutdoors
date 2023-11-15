@@ -44,7 +44,7 @@
 
 /* National Park Search Page Hero Image */
 .park-map-img{
-    min-height: 100vh;
+    min-height: 105vh;
     position: relative;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/images/mapOfParks.png);
     background-size: cover;
