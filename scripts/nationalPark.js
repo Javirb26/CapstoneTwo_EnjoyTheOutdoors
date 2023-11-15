@@ -1,4 +1,5 @@
 // National Parks: Populate Select element and Search for a park based on location or park type
+
 window.onload = function populateParkNames() {
 
     // Select Elements to be populated
