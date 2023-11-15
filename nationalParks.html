@@ -55,12 +55,11 @@
     </nav>
 
     <!-- CREATE UI THAT ALLOWS USERS TO SEARCH FOR THE PARK THAT IS JUST RIGHT FOR THEM.-->
-    <main class="main-bg">
-        <div>
-            <div class="park-map-img">
-
-                <div class="hero-text-search">
-                    <h1 class="text-center text-white hero-text">Find Your Perfect Get Away</h1>
+    <main>
+        <div class="main-bg">
+            <div class="park-map-img text-center">
+                <div class="hero-text">
+                    <h1 class="text-white text-center hero-text">Find Your Perfect Get Away</h1>
                     <div class="custom-shape-divider-bottom-1699928242">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -69,20 +68,25 @@
                         </svg>
                     </div>
                 </div>
+                <button class="btn btn-warning"><a class="nav-link" href="#findPark">Search For Parks</a></button>
 
             </div>
+
             <div class="container">
-                <h1 class="text-center my-5">Find A Park</h1>
-                <form class="mb-5">
+                <h2 class="text-center my-5 fs-1">Find A Park</h2>
+                <form class="pb-5">
                     <div class="row find-bg">
-                        <div class="col-md-6 my-4 border-end">
-                            <h2 class="text-white">Find Park By:</h2>
+
+                        <div class="col-md-6 my-4 border-end rounded-1">
+
+                            <h2 class="text-white text-center" id="findPark">Find Park By:</h2>
+
                             <select name="selectNationalPark" id="selectNationalPark" class="form-control">
                                 <option value="none">By Location...</option>
                             </select>
                         </div>
                         <div class="col-md-6 my-4">
-                            <h2 class="text-white">Find Park By:</h2>
+                            <h2 class="text-white text-center">Find Park By:</h2>
                             <select name="selectParkType" id="selectParkType" class="form-control">
                                 <option value="none">By Type...</option>
                             </select>
