@@ -60,9 +60,9 @@
 
 /* Mountains Information Page Hero Image */
 .mountain-hero-img{
-    min-height: 95vh;
+    min-height: 105vh;
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)), url(/images/mountainClimbing.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.1)), url(/images/mountainClimbing.png);
     background-size: cover;
     background-position: center;
     padding-left: 8%;
