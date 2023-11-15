@@ -6958,13 +6958,13 @@ window.onload = function populateParkNames() {
     populateSelect(selectLocationEl, locationsArray);
     populateSelect(selectTypeEl, parkTypesArray);
 
-    // Verify if state option and property are equal and add park names as output
+    // Event handler for Location Select El onchage event
     selectLocationEl.onchange = () => {
 
-        // Value of Location Select Element
+        // Get the selected value from the Location Select Element
         const selectedState = selectLocationEl.value;
 
-        // Make the UL an Empty String/Blank content by default
+        // Clear the content of the UL element (descriptionEL)
         descriptionEl.innerHTML = "";
 
 
@@ -6995,12 +6995,12 @@ window.onload = function populateParkNames() {
         };
     };
 
-    // verify location names contain selectedType value
+    // Event handler for Park Type Select El onchage event
     selectTypeEl.onchange = () => {
-        // Value of Park Type Select Element
+        // Get the selected value from the Park Type Select Element
         const selectedType = selectTypeEl.value;
 
-        // Make the UL an Empty String/Blank content by default
+        // Clear the content of the UL element (descriptionEL)
         descriptionEl.innerHTML = "";
 
         // Filter nationalParksArray to include park names containing the selected park type
