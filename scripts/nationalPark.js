@@ -65,7 +65,7 @@ window.onload = function populateParkNames() {
         "West Virginia",
         "Wisconsin",
         "Wyoming"
-    ]
+    ];
 
     // nationalParkData Array
     const nationalParksArray = [
@@ -6927,7 +6927,7 @@ window.onload = function populateParkNames() {
                 type: "Point"
             }
         }
-    ]
+    ];
 
     // park type array
     const parkTypesArray = [
@@ -6944,7 +6944,7 @@ window.onload = function populateParkNames() {
         "Seashore",
         "Trail",
         "Parkway"
-    ]
+    ];
 
     // Modular / DRY function able to be used for both Select Elements
     let populateSelect = (selectEl, array) => {
@@ -6952,8 +6952,8 @@ window.onload = function populateParkNames() {
             let optionValue = array[i];
             let optionEl = new Option(optionValue);
             selectEl.appendChild(optionEl);
-        }
-    }
+        };
+    };
     // Function Calls
     populateSelect(selectLocationEl, locationsArray);
     populateSelect(selectTypeEl, parkTypesArray);
@@ -6971,7 +6971,7 @@ window.onload = function populateParkNames() {
         // Filter nationalParksArray to include only park objects with the selectedState as their State property
         let parksMatchingState = nationalParksArray.filter((park) => {
             return park.State === selectedState;
-        })
+        });
 
         // If Statement for proper output
 
@@ -6990,10 +6990,10 @@ window.onload = function populateParkNames() {
                 listEl.classList.add("my-4");
                 listEl.style.borderBottom = "thin solid #d4d4d4";
 
-                descriptionEl.appendChild(listEl);
+                 descriptionEl.appendChild(listEl);
             });
-        }
-    }
+        };
+    };
 
     // verify location names contain selectedType value
     selectTypeEl.onchange = () => {
@@ -7028,9 +7028,9 @@ window.onload = function populateParkNames() {
             listEl2.style.borderBottom = "thin solid #d4d4d4";
 
             descriptionEl.appendChild(listEl2);
-        })
-       }
+        });
+       };
        
-    }
+    };
 
-}
+};
