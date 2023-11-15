@@ -21,12 +21,7 @@
     background-color: rgb(25, 39, 44);
 }
 
-/* aligns navbar items center */
-.navbar {
-    height: 12px;
-    display: flex;
-    align-items: center;
-}
+
 
 /* Styles for Hero image container */
 .jumbo-container{
@@ -85,6 +80,7 @@
 .desc-ul {
     padding-right: 32px;
 }
+
 
 /* WAVE DIVIDER FOR SEARCH PAGE */
 .custom-shape-divider-bottom-1699928242 {
