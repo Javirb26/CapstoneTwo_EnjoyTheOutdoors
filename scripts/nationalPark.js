@@ -1,14 +1,11 @@
-// location data
-
-
-
-
-
-
+// National Parks: Populate Select element and Search for a park based on location or park type
 window.onload = function populateParkNames() {
+
+    // Select Elements to be populated
     const selectLocationEl = document.getElementById("selectNationalPark");
     const selectTypeEl = document.getElementById("selectParkType");
 
+    // Empty UL to be populated
     const descriptionEl = document.getElementById("description");
 
     // location data
@@ -6949,6 +6946,7 @@ window.onload = function populateParkNames() {
         "Parkway"
     ]
 
+    // Modular / DRY function able to be used for both Select Elements
     let populateSelect = (selectEl, array) => {
         for (let i = 0; i < array.length; i++){
             let optionValue = array[i];
@@ -6956,25 +6954,32 @@ window.onload = function populateParkNames() {
             selectEl.appendChild(optionEl);
         }
     }
+    // Function Calls
     populateSelect(selectLocationEl, locationsArray);
     populateSelect(selectTypeEl, parkTypesArray);
 
     // Verify if state option and property are equal and add park names as output
     selectLocationEl.onchange = () => {
 
+        // Value of Location Select Element
         const selectedState = selectLocationEl.value;
 
+        // Make the UL an Empty String/Blank content by default
         descriptionEl.innerHTML = "";
 
+
+        // Filter nationalParksArray to include only park objects with the selectedState as their State property
         let parksMatchingState = nationalParksArray.filter((park) => {
             return park.State === selectedState;
         })
 
+        // If Statement for proper output
+
+        // Display an error message if "none" is selected
         if (selectedState === "none"){
-            descriptionEl.innerHTML = "No State or Territory Chosen!";
-        } else if(parksMatchingState === 0) {
-            descriptionEl.innerHTML = "No Parks found for the selected location."
+            descriptionEl.innerHTML = "No State or Territory Chosen!";  
         } else {
+            // Populate DescriptionEl (UL) with park names
             parksMatchingState.forEach((park) => {
                 let listEl = document.createElement("li");
                 listEl.innerHTML = park.LocationName;
@@ -6990,28 +6995,38 @@ window.onload = function populateParkNames() {
         }
     }
 
+    // verify location names contain selectedType value
     selectTypeEl.onchange = () => {
+        // Value of Park Type Select Element
         const selectedType = selectTypeEl.value;
+
+        // Make the UL an Empty String/Blank content by default
         descriptionEl.innerHTML = "";
 
-       let parkOfSameType = nationalParksArray.filter((park) => {
+        // Filter nationalParksArray to include park names containing the selected park type
+        let parkOfSameType = nationalParksArray.filter((park) => {
             return park.LocationName.toLowerCase().includes(selectedType.toLowerCase());
-       });
+        });
 
+        // Display error message if parkOfSame Type array is empty
        if(parkOfSameType.length === 0){
         descriptionEl.innerHTML = "No Park type Chosen!";
        } else {
+        // Populate descriptionEl (UL) with park names
         parkOfSameType.forEach((park) => {
             const parkName = park.LocationName;
             let listEl2 = document.createElement("li");
             listEl2.innerHTML = parkName;
             
+            // Add bootstrap classes to li
             listEl2.classList.add("text-center");
             listEl2.classList.add("nav-link");
             listEl2.classList.add("fs-4");
             listEl2.classList.add("py-2");
             listEl2.classList.add("my-4");
+            // Add bottom border to li
             listEl2.style.borderBottom = "thin solid #d4d4d4";
+
             descriptionEl.appendChild(listEl2);
         })
        }
