@@ -8,6 +8,12 @@ window.onload = function populateMountainSelect () {
     const mountainSelectEl = document.getElementById("mountainSelect");
     // Empty UL Element to be Populated
     const descriptionEl = document.getElementById("description");
+    // 
+    const imgDivEl = document.getElementById("imgDiv");
+
+    const mountainDescEl = document.getElementById("mountainDesc");
+
+    const mountainContainerEl = document.getElementById("mountainContainer");
 
         // mountains data
         const mountainsArray = [
@@ -558,58 +564,60 @@ window.onload = function populateMountainSelect () {
             let selectedMountain = mountainSelectEl.value;
             // Clear the content of the UL element (descriptionEL)
             descriptionEl.innerHTML = "";
+            imgDivEl.innerHTML = "";
+            mountainDescEl.innerHTML = "";
 
             // Filter mountainsArray to include Mountain objects with selectedMountain as their name
-            let mountainDescriptions = mountainsArray.filter((desc) => {
-                return desc.name === selectedMountain 
-            });
+            let mountainDescription = mountainsArray.find((desc) => desc.name.includes(selectedMountain));
 
-            // Display error message if no mountain descriptions are found
-            if (mountainDescriptions.length === 0){
-                descriptionEl.innerHTML = "No such Mountain";
-            } else {
-                // Populate descriptionEl (UL) with mountain details
-                mountainDescriptions.forEach((desc) => {
-                    // Create elements to populate within descriptionEl
                     let listEl = document.createElement("li");
                     let pElevEl = document.createElement("p");
                     let pEffortEl = document.createElement("p");
                     let imgEl = document.createElement("img");
                     let pDescEl = document.createElement("p");
 
+                    if(selectedMountain === mountainDescription.name){
+                        mountainContainerEl.classList.add('card');
+                    } else {
+                        mountainContainerEl.classList.remove('card');
+                    }
+                    
+
                     // Set mountain name
-                    listEl.innerHTML = desc.name;
+                    listEl.innerHTML = mountainDescription.name;
                     // Added BootStrap classes to listEl
-                    listEl.classList.add('nav-link', 'text-white', 'fs-4', 'mt-4');
+                    listEl.classList.add('nav-link', 'fs-4', 'mt-4', 'card-title');
 
                     // set elevation info
-                    pElevEl.innerHTML = 'Elevation: ' + desc.elevation;
+                    pElevEl.innerHTML = 'Elevation: ' + mountainDescription.elevation;
                     // Added BootStrap class to pElevEl 
-                    pElevEl.classList.add("mt-3")
+                    pElevEl.classList.add('mt-3', 'card-text')
 
                     // set effort info
-                    pEffortEl.innerHTML = 'Effort: ' + desc.effort;
+                    pEffortEl.innerHTML = 'Effort: ' + mountainDescription.effort;
+                    pEffortEl.classList.add('mt-3', 'card-text')
                     
                     // set image source
-                    imgEl.src = 'images/' + desc.img;
+                    imgEl.src = 'images/' + mountainDescription.img;
                     // Added BootStrap classes to imgEl
-                    imgEl.classList.add('img-fluid', 'rounded-3');
+                    imgEl.classList.add('img-fluid', 'rounded-3', 'mt-4', 'card-img-top');
 
                     // set mountain description
-                    pDescEl.innerHTML = desc.desc;
+                    pDescEl.innerHTML = mountainDescription.desc;
                     // Added BootStrap classes to pDescEl
-                    pDescEl.classList.add('fs-5', 'mt-4')
+                    pDescEl.classList.add('fs-4', 'pb-4', 'mt-4', 'text-center', 'card-text')
 
                     // Append newly created elements to listEl
                     listEl.appendChild(pElevEl);
                     listEl.appendChild(pEffortEl);
-                    listEl.appendChild(imgEl);
-                    listEl.appendChild(pDescEl);
+                    // listEl.appendChild(imgEl);
+                    // listEl.appendChild(pDescEl);
 
                     // Append listEl to descriptionEl to populate within HTML
+                    imgDivEl.append(imgEl);
+                    mountainDescEl.appendChild(pDescEl);
                     descriptionEl.appendChild(listEl);
-                })
-            }
+
 
         }
 
