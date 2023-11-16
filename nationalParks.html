@@ -44,64 +44,138 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link active" href="nationalParks.html">SEARCH</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="mountainInfo.html">INFO</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="mountainInfo.html">INFO</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- CREATE UI THAT ALLOWS USERS TO SEARCH FOR THE PARK THAT IS JUST RIGHT FOR THEM.-->
-    <main>
-        <div class="main-bg">
-            <div class="park-map-img text-center">
-                <div class="hero-text">
-                    <h1 class="text-white text-center hero-text">Find Your Perfect Get Away</h1>
-                    <div class="custom-shape-divider-bottom-1699928242">
-                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-                        </svg>
-                    </div>
-                </div>
-                <button class="btn btn-warning"><a class="nav-link" href="#findPark">Search For Parks</a></button>
-
+    <div class="park-map-img">
+      <header>
+        <div class="p-5 rounded-3">
+          <div class="container py-5 search-text">
+            <h1 class="display-5 fw-bold text-white">
+              Find Your Perfect Get Away
+            </h1>
+            <p class="col-md-12 fs-4 mt-3 text-white">
+              Welcome to our National Parks Search Page, your gateway to
+              exploring the natural wonders of the United States. With a vast
+              array of national parks spanning the nation, you can embark on an
+              unforgettable journey to discover the rich diversity of landscapes
+              and experiences our country has to offer. Whether you're an avid
+              outdoor enthusiast or a history buff, there's a park waiting for
+              you.
+            </p>
+            <div class="custom-shape-divider-bottom-1699928242">
+              <svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                  opacity=".25"
+                  class="shape-fill"
+                ></path>
+                <path
+                  d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                  opacity=".5"
+                  class="shape-fill"
+                ></path>
+                <path
+                  d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                  class="shape-fill"
+                ></path>
+              </svg>
             </div>
-
-            <div class="container">
-                <h2 class="text-center my-5 fs-1">Find A Park</h2>
-                <form class="pb-5">
-                    <div class="row find-bg">
-
-                        <div class="col-md-6 my-4 border-end rounded-1">
-
-                            <h2 class="text-white text-center" id="findPark">Find Park By:</h2>
-
-                            <select name="selectNationalPark" id="selectNationalPark" class="form-control">
-                                <option value="none">By Location...</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 my-4">
-                            <h2 class="text-white text-center">Find Park By:</h2>
-                            <select name="selectParkType" id="selectParkType" class="form-control">
-                                <option value="none">By Type...</option>
-                            </select>
-                        </div>
-                        
-                    </div>
-                    <div class="mb-4 container">
-                        <ul id="description">
-                            
-                        </ul>
-                    </div>
-                    
-                </form>
-            </div>
+          </div>
         </div>
+      </header>
+    </div>
+
+    <!-- CREATE UI THAT ALLOWS USERS TO SEARCH FOR THE PARK THAT IS JUST RIGHT FOR THEM.-->
+    <main class="main-bg">
+
+      <div class="container">
+        <div class="row g-5 py-5 justify-content-sm-center">
+          <div class="col-xl-5">
+            <h2 class="text-center fw-bold">Effortless Park Exploration:</h2>
+            <p class="text-center fs-4">
+              With our user-friendly search options, explore parks by location or type. Find specific state parks or plan a road trip to discover national treasures. Whether you love hiking, wildlife, history, or scenic vistas, our 60+ national parks offer the ideal adventure. Join us in connecting with nature's wonders and fostering a vibrant community of outdoor enthusiasts!
+            </p>
+          </div>
+          <div class="col-sm-9 col-xl-7">
+            <img
+              class="img-fluid rounded-3"
+              src="images/searchParks.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+
+      <div style="background-color: antiquewhite">
+        <div class="container">
+          <h2 class="text-center py-5 fs-1">Find A Park</h2>
+          <form class="pb-5">
+            <div class="row find-bg">
+              <div class="col-md-6 my-4 border-end rounded-1">
+                <h2 class="text-white text-center" id="findPark">
+                  Find Park By:
+                </h2>
+  
+                <select
+                  name="selectNationalPark"
+                  id="selectNationalPark"
+                  class="form-control"
+                >
+                  <option value="none">By Location...</option>
+                </select>
+              </div>
+              <div class="col-md-6 my-4">
+                <h2 class="text-white text-center">Find Park By:</h2>
+                <select
+                  name="selectParkType"
+                  id="selectParkType"
+                  class="form-control"
+                >
+                  <option value="none">By Type...</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-4 container">
+              <ul id="description"></ul>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="py-5 mt-5">
+        <div class="container">
+          <h2 class="text-center mt-3">Join Us:</h2>
+          <p class="text-center fs-4 mt-4">
+            Join the PeakFinderPro Community Today: Embark on unforgettable adventures, discover new mountains, and explore national parks like never before. Let's celebrate the great outdoors together.
+          </p>
+          <form action="">
+            <label for="email"></label>
+            <input class="form-control fs-4" type="email" id="email" name="email" placeholder="PeakFinderPro@gmail.com" required>
+            <div class="text-center">
+              <input class="btn btn-success mt-3 px-5 fs-4" type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      
     </main>
 
     <!-- Footer -->
@@ -118,11 +192,16 @@
           <div class="col-md-4 h-100 text-center">
             <h3 class="text-white text-center:">Pages</h3>
             <ul class="navbar-nav">
-            <li class="nav-item text-white text-center"><a class="nav-link fs-5" href="index.html">Home</a></li>
-            <li class="nav-item text-white text-center"><a class="nav-link fs-5" href="nationalParks.html">Search</a></li>
-            <li class="nav-item text-white text-center"><a class="nav-link fs-5" href="mountainInfo.html">INFO</a></li>
+              <li class="nav-item text-white text-center">
+                <a class="nav-link fs-5" href="index.html">Home</a>
+              </li>
+              <li class="nav-item text-white text-center">
+                <a class="nav-link fs-5" href="nationalParks.html">Search</a>
+              </li>
+              <li class="nav-item text-white text-center">
+                <a class="nav-link fs-5" href="mountainInfo.html">INFO</a>
+              </li>
             </ul>
-            
           </div>
 
           <div class="col-md-4 h-100 text-center">
