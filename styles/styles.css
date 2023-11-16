@@ -43,7 +43,7 @@
 
 /* National Park Search Page Hero Image */
 .park-map-img{
-    min-height: 105vh;
+    min-height: 35vh;
     position: relative;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/mapOfParks.png);
     background-size: cover;
@@ -73,6 +73,10 @@
 /* Styles for h1 in Hero Image Area  */
 .hero-text h1 {
     font-size: 4rem;
+}
+
+.search-text h1 {
+    font-size: 3.5rem;
 }
 
 /* Right padding for Mountain Select Output */
