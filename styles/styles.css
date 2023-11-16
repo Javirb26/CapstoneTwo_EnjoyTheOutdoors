@@ -21,6 +21,10 @@
     background-color: rgb(25, 39, 44);
 }
 
+.everyOther-bg {
+    background-color: antiquewhite
+}
+
 
 /* Styles for Hero image container */
 .jumbo-container{
