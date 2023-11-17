@@ -7002,6 +7002,7 @@ window.onload = function populateParkNames() {
         // Display an error message if "none" is selected
         if (selectedState === "none"){
             descriptionEl.innerHTML = "No State or Territory Chosen!";  
+            descriptionEl.classList.add("text-center", "mt-4", "fs-3", "fw-bold");
         } else {
             // Populate DescriptionEl (UL) with park names
             parksMatchingState.forEach((park) => {
