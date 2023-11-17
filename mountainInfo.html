@@ -72,8 +72,8 @@
               mountaineer or simply fascinated by these towering giants, there's
               a mountain waiting for you to explore.
             </p>
-            <button class="btn mb-5 btn-lg btn-warning">
-              <a class="nav-link" href="#peak">Find Your Peak</a>
+            <button class="btn mb-5 btn-lg btn-warning border-0">
+              <a class="nav-link text-white" href="#peak">Find Your Peak</a>
             </button>
             <div class="custom-shape-divider-bottom-1699928242">
               <svg
@@ -125,20 +125,23 @@
         </div>
 
         <div class="container">
-          <h2 class="text-center fw-bold fs-1 mt-5">Featured Mountains</h2>
-          <div class="row g-5 py-5 justify-content-sm-center">
+          <div>
+            <h2 class="text-center fw-bold fs-1 my-5">Featured Mountains</h2>
+          </div>
+          
+          <div class="row gx-5 justify-content-sm-center border">
             <div class="col-xl-6">
               <img class="img-fluid rounded-3" src="images/mtTom.png" alt="">
             </div>
-            <div class="col-sm-9 col-md-6 pt-5 border">
+            <div class="col-sm-9 col-md-6 pt-5">
               <h2 class="py-3">Mount Tom</h2>
               <p class="fs-4">Mount Tom, located in the heart of the White Mountains in New Hampshire, stands as a symbol of natural beauty and outdoor adventure. With an elevation of 4,051 feet (1,235 meters), it offers stunning panoramic views of the surrounding wilderness. Known for its challenging trails and breathtaking vistas, Mount Tom attracts hikers and nature enthusiasts from far and wide. Whether you're trekking through dense forests to reach its summit or admiring its rugged profile from afar, Mount Tom promises an unforgettable mountain experience in the northeastern United States.</p>
             </div>
           </div>
 
-          <div class="row g-5 py-5 justify-content-sm-center">
+          <div class="row gx-5 mt-5 justify-content-sm-center border">
             
-            <div class="col-sm-9 col-md-6 pt-5 border">
+            <div class="col-sm-9 col-md-6 pt-5">
               <h2 class="py-3">Mount Washington</h2>
               <p class="fs-4">Mount Washington, proudly known as the 'Home of the World's Worst Weather,' is the highest peak in the northeastern United States, towering at 6,288 feet (1,917 meters). Located within the White Mountain National Forest of New Hampshire, this iconic mountain offers a unique blend of natural beauty and meteorological extremes. With its unpredictable weather conditions, including fierce winds and freezing temperatures, Mount Washington presents a challenging yet rewarding ascent for adventurers. Reaching the summit provides awe-inspiring views of neighboring peaks and distant landscapes, making it a must-visit destination for hikers and weather enthusiasts alike</p>
             </div>
@@ -148,11 +151,11 @@
             </div>
           </div>
 
-          <div class="row g-5 py-5 justify-content-sm-center">
+          <div class="row gx-5 mt-5 justify-content-sm-center border">
             <div class="col-xl-6">
               <img class="img-fluid rounded-3" src="images/mtTecu.png" alt="">
             </div>
-            <div class="col-sm-9 col-md-6 pt-5 border">
+            <div class="col-sm-9 col-md-6 pt-5">
               <h2 class="py-3">Mount Tecumseh</h2>
               <p class="fs-4">Mount Tecumseh, standing at 4,003 feet (1,220 meters), is one of the most accessible and picturesque peaks in the White Mountains of New Hampshire. Named after the Shawnee leader Tecumseh, this mountain offers a splendid hiking experience for both beginners and seasoned enthusiasts. Its well-maintained trail leads you through enchanting forests, across clear mountain streams, and eventually to the summit, where you'll be rewarded with panoramic views of the surrounding wilderness. Mount Tecumseh is a great choice for those looking to enjoy a serene and peaceful outdoor adventure in the heart of the White Mountains.</p>
             </div>
@@ -167,12 +170,11 @@
       <!-- for select and ul  -->
       <div class="">
         <div class="container">
-          <h2 class="text-center mb-4 pt-5 fs-1">Find A Peak</h2>
           <form class="pb-5">
             <div class="row d-flex justify-content-center">
-              <div class="col-md-8 my-4 py-4 px-5 find-bg rounded-1">
-                <h2 class="text-white text-center">
-                  Find Mountain:
+              <div class="col-md-8 my-4 py-4 px-5 everyOther-bg rounded-1">
+                <h2 class="text-center">
+                  Find A Peak
                 </h2>
 
                 <select
@@ -180,27 +182,12 @@
                   id="mountainSelect"
                   class="form-control"
                 >
-                  <option value="none">By Mountain Name...</option>
+                  <option value="Default">By Mountain Name...</option>
                 </select>
 
-                
-                  <!-- <ul class="desc-ul text-center" id="description">
-
-                  </ul> -->
-                </div>
-                <!-- <div class="container everyOther-bg rounded-3">
-                  <div class="row">
-                    
-                    <div >
-
-                    </div>
-                    <div class="col-md-12" id="mountainDesc">
-
-                    </div>
-                  </div>
-              </div> -->
-
               
+                </div>
+                
 
               <div class="mb-3" id="mountainContainer" style="max-width: 540px;">
                 <div class="row g-0 ">
@@ -210,17 +197,17 @@
                     </div>
   
                   <div class="col-sm-12 col-md-6">
-                    <div class="card-body">
-                      <div class="text-center" id="description">
+                    <div class="card-body mt-2">
+                      <div class="text-center pt-1 rounded-3" id="description">
                       
                       </div>
                       
                     </div>
                     
                   </div>
-                  <div class="col-md-12" id="mountainDesc">
+                  <div class="col-md-12  rounded-top-1" id="mountainDesc">
                     
-                </div>
+                  </div>
                 </div>
               </div>
 
@@ -230,7 +217,7 @@
         </div>
       </div>
 
-      <div class="py-5 mt-5">
+      <div class="py-5 mt-2">
         <div class="container">
           <h2 class="text-center mt-3">Join Us:</h2>
           <p class="text-center fs-4 mt-4">
@@ -250,7 +237,7 @@
             />
             <div class="text-center">
               <input
-                class="btn btn-success mt-3 px-5 fs-4"
+                class="btn btn-primary border-0 mt-3 px-5 fs-4"
                 type="submit"
                 value="Submit"
               />
