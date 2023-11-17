@@ -217,7 +217,7 @@
         </div>
       </div>
 
-      <div class="py-5 mt-2">
+      <div class="py-5 mt-5">
         <div class="container">
           <h2 class="text-center mt-3">Join Us:</h2>
           <p class="text-center fs-4 mt-4">
@@ -225,7 +225,7 @@
             adventures, discover new mountains, and explore national parks like
             never before. Let's celebrate the great outdoors together.
           </p>
-          <form action="">
+          <form id="form-submit">
             <label for="email"></label>
             <input
               class="form-control fs-4"
@@ -236,11 +236,39 @@
               required
             />
             <div class="text-center">
-              <input
-                class="btn btn-primary border-0 mt-3 px-5 fs-4"
+              <button
+                class="btn btn-warning border-0 text-white mt-3 px-5 fs-4"
+                id="liveToastBtn"
                 type="submit"
                 value="Submit"
-              />
+              >
+                Submit
+              </button>
+
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div
+                  id="liveToast"
+                  class="toast"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="toast-header">
+                    
+                    <strong class="me-auto fw-bold">Joined PeakFinderPro Community</strong>
+                    
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="toast-body fw-bold">
+                    Welcome to the Community!
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -300,5 +328,6 @@
 
     <!-- javascript file -->
     <script src="scripts/mountainInfo.js"></script>
+    <script src="scripts/submit.js"></script>
   </body>
 </html>
