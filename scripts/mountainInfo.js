@@ -566,59 +566,68 @@ window.onload = function populateMountainSelect () {
             descriptionEl.innerHTML = "";
             imgDivEl.innerHTML = "";
             mountainDescEl.innerHTML = "";
+            // mountainContainerEl = ""; 
 
+            if (selectedMountain === "Default") {
+                // If "Default" is selected, clear the card and return
+                mountainDescEl.classList.add('text-center', 'fs-2')
+                return mountainDescEl.innerHTML = 'No Mountain Choosen';
+            }
+        
+
+            
             // Filter mountainsArray to include Mountain objects with selectedMountain as their name
             let mountainDescription = mountainsArray.find((desc) => desc.name.includes(selectedMountain));
 
+                if(mountainDescription){
+                    mountainContainerEl.classList.add('card');
+                
                     let listEl = document.createElement("li");
-                    let pElevEl = document.createElement("p");
-                    let pEffortEl = document.createElement("p");
-                    let imgEl = document.createElement("img");
-                    let pDescEl = document.createElement("p");
-
-                    if(selectedMountain === mountainDescription.name){
-                        mountainContainerEl.classList.add('card');
-                    } else {
-                        mountainContainerEl.classList.remove('card');
-                    }
-                    
-
                     // Set mountain name
                     listEl.innerHTML = mountainDescription.name;
                     // Added BootStrap classes to listEl
                     listEl.classList.add('nav-link', 'fs-4', 'mt-4', 'card-title');
 
+                    let pElevEl = document.createElement("p");
                     // set elevation info
                     pElevEl.innerHTML = 'Elevation: ' + mountainDescription.elevation;
                     // Added BootStrap class to pElevEl 
                     pElevEl.classList.add('mt-3', 'card-text')
 
+                    let pEffortEl = document.createElement("p");
                     // set effort info
                     pEffortEl.innerHTML = 'Effort: ' + mountainDescription.effort;
                     pEffortEl.classList.add('mt-3', 'card-text')
-                    
+
+                    let imgEl = document.createElement("img");
                     // set image source
                     imgEl.src = 'images/' + mountainDescription.img;
                     // Added BootStrap classes to imgEl
                     imgEl.classList.add('img-fluid', 'rounded-3', 'mt-4', 'card-img-top');
 
+                    let pDescEl = document.createElement("p");
                     // set mountain description
                     pDescEl.innerHTML = mountainDescription.desc;
                     // Added BootStrap classes to pDescEl
                     pDescEl.classList.add('fs-4', 'pb-4', 'mt-4', 'text-center', 'card-text')
 
+
                     // Append newly created elements to listEl
                     listEl.appendChild(pElevEl);
                     listEl.appendChild(pEffortEl);
-                    // listEl.appendChild(imgEl);
-                    // listEl.appendChild(pDescEl);
 
                     // Append listEl to descriptionEl to populate within HTML
                     imgDivEl.append(imgEl);
+                    
+                    
+                    
+
                     mountainDescEl.appendChild(pDescEl);
                     descriptionEl.appendChild(listEl);
+                         
+                }
 
+                }
 
         }
 
-}
