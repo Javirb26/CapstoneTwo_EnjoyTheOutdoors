@@ -34,7 +34,7 @@
         <a class="navbar-brand fs-3" href="index.html">
           <span>PeakFinderPro</span></a
         >
-        
+
         <!-- Mobile Hamburger Menu -->
         <button
           class="navbar-toggler"
@@ -52,7 +52,7 @@
           class="collapse navbar-collapse justify-content-end"
           id="navbarSupportedContent"
         >
-        <!-- Navigation Links -->
+          <!-- Navigation Links -->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="index.html">HOME</a>
@@ -64,17 +64,18 @@
               <a class="nav-link" href="mountainInfo.html">INFO</a>
             </li>
           </ul>
-
         </div>
-        
       </div>
-
     </nav>
 
+    <!-- HEADER SECTION -->
+    <!-- Background-imgae Class -->
     <div class="park-map-img">
       <header>
+        <!-- Hero Container -->
         <div class="p-5 rounded-3">
           <div class="container py-5 search-text">
+            <!-- Hero Content -->
             <h1 class="display-5 fw-bold text-white">
               Find Your Perfect Get Away
             </h1>
@@ -87,6 +88,8 @@
               outdoor enthusiast or a history buff, there's a park waiting for
               you.
             </p>
+
+            <!-- Wave Divider -->
             <div class="custom-shape-divider-bottom-1699928242">
               <svg
                 data-name="Layer 1"
@@ -115,9 +118,8 @@
       </header>
     </div>
 
-    <!-- CREATE UI THAT ALLOWS USERS TO SEARCH FOR THE PARK THAT IS JUST RIGHT FOR THEM.-->
+    <!-- MAIN SECTION -->
     <main class="main-bg">
-
       <!-- First Section Main Content -->
       <div class="container">
         <!-- Search Info Content -->
@@ -128,7 +130,12 @@
             <h2 class="text-center fw-bold">Effortless Park Exploration:</h2>
 
             <p class="text-center fs-4">
-              With our user-friendly search options, explore parks by location or type. Find specific state parks or plan a road trip to discover national treasures. Whether you love hiking, wildlife, history, or scenic vistas, our 60+ national parks offer the ideal adventure. Join us in connecting with nature's wonders and fostering a vibrant community of outdoor enthusiasts!
+              With our user-friendly search options, explore parks by location
+              or type. Find specific state parks or plan a road trip to discover
+              national treasures. Whether you love hiking, wildlife, history, or
+              scenic vistas, our 60+ national parks offer the ideal adventure.
+              Join us in connecting with nature's wonders and fostering a
+              vibrant community of outdoor enthusiasts!
             </p>
           </div>
 
@@ -140,133 +147,119 @@
               alt=""
             />
           </div>
-
         </div>
       </div>
 
-
-        <!-- PARK SEARCH -->
-        <div class="container">
-          <!-- Form container for PARK SEARCH -->
-          <form class="pb-5">
-            <!-- PARK SEARCH  Content -->
-            <div class="row everyOther-bg">
-               <!-- SEARCH LOCATION Text Content -->
-              <div class="col-md-6 my-4 border-end rounded-1">
-                <h2 class="text-center fw-bold" id="findPark">
-                  Find Park By:
-                </h2>
-  
-                <!-- SELECT ELEMENT FOR: LOCATION -->
-                <select
-                  name="selectNationalPark"
-                  id="selectNationalPark"
-                  class="form-control"
-                >
-                  <!-- Default Option -->
-                  <option value="none">By Location...</option>
-                </select>
-
-              </div>
-
-              <!-- SEARCH PARK TYPE Text Content -->
-              <div class="col-md-6 my-4">
-                <h2 class="text-center fw-bold">Find Park By:</h2>
-
-                <!-- SELECT ELEMENT FOR: PARK TYPE -->
-                <select
-                  name="selectParkType"
-                  id="selectParkType"
-                  class="form-control"
-                >
-                  <!-- Default Option -->
-                  <option value="none">By Type...</option>
-                </select>
-
-              </div>
-
-            </div>
-
-            <!-- Container for Description to Be Populated BY JS -->
-            <div class="mb-4 container">
-              <ul id="description"></ul>
-            </div>
-
-          </form>
-        </div>
-
-      <!-- Join Us CTA Main Section -->
-    <div class="pb-5">
-      <!-- Join Us Content -->
+      <!-- PARK SEARCH -->
       <div class="container">
+        <!-- Form container for PARK SEARCH -->
+        <form class="pb-5">
+          <!-- PARK SEARCH  Content -->
+          <div class="row everyOther-bg">
+            <!-- SEARCH LOCATION Text Content -->
+            <div class="col-md-6 my-4 border-end rounded-1">
+              <h2 class="text-center fw-bold" id="findPark">Find Park By:</h2>
 
-        <!-- Join Us Text Content -->
-        <h2 class="text-center mt-3">Join Us:</h2>
-        <p class="text-center fs-4 mt-4">
-          Join the PeakFinderPro Community Today: Embark on unforgettable
-          adventures, discover new mountains, and explore national parks like
-          never before. Let's celebrate the great outdoors together.
-        </p>
-
-        <!-- Email Form To Join PeakFinderPro Community -->
-        <form id="form-submit">
-
-          <!-- Email Input Area -->
-          <label for="email"></label>
-          <input
-            class="form-control fs-4"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="PeakFinderPro@gmail.com"
-            required
-          />
-
-
-          <!-- Form Submit Button -->
-          <div class="text-center">
-            <button
-              class="btn btn-warning border-0 text-white mt-3 px-5 fs-4"
-              id="liveToastBtn"
-              type="submit"
-              value="Submit"
-            >
-              Submit
-            </button>
-
-            <!-- Bootstrap Pop up "Toast" -->
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-              <div
-                id="liveToast"
-                class="toast"
-                role="alert"
-                aria-live="assertive"
-                aria-atomic="true"
+              <!-- SELECT ELEMENT FOR: LOCATION -->
+              <select
+                name="selectNationalPark"
+                id="selectNationalPark"
+                class="form-control"
               >
-                <div class="toast-header">
-                  
-                  <strong class="me-auto fw-bold">Joined PeakFinderPro Community</strong>
-                  
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="toast"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="toast-body fw-bold">
-                  Welcome to the Community!
-                </div>
-              </div>
+                <!-- Default Option -->
+                <option value="none">By Location...</option>
+              </select>
             </div>
 
+            <!-- SEARCH PARK TYPE Text Content -->
+            <div class="col-md-6 my-4">
+              <h2 class="text-center fw-bold">Find Park By:</h2>
+
+              <!-- SELECT ELEMENT FOR: PARK TYPE -->
+              <select
+                name="selectParkType"
+                id="selectParkType"
+                class="form-control"
+              >
+                <!-- Default Option -->
+                <option value="none">By Type...</option>
+              </select>
+            </div>
           </div>
 
-
+          <!-- Container for Description to Be Populated BY JS -->
+          <div class="mb-4 container">
+            <ul id="description"></ul>
+          </div>
         </form>
       </div>
-    </div>
-      
+
+      <!-- Join Us CTA Main Section -->
+      <div class="pb-5">
+        <!-- Join Us Content -->
+        <div class="container">
+          <!-- Join Us Text Content -->
+          <h2 class="text-center mt-3">Join Us:</h2>
+          <p class="text-center fs-4 mt-4">
+            Join the PeakFinderPro Community Today: Embark on unforgettable
+            adventures, discover new mountains, and explore national parks like
+            never before. Let's celebrate the great outdoors together.
+          </p>
+
+          <!-- Email Form To Join PeakFinderPro Community -->
+          <form id="form-submit">
+            <!-- Email Input Area -->
+            <label for="email"></label>
+            <input
+              class="form-control fs-4"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="PeakFinderPro@gmail.com"
+              required
+            />
+
+            <!-- Form Submit Button -->
+            <div class="text-center">
+              <button
+                class="btn btn-warning border-0 text-white mt-3 px-5 fs-4"
+                id="liveToastBtn"
+                type="submit"
+                value="Submit"
+              >
+                Submit
+              </button>
+
+              <!-- Bootstrap Pop up "Toast" -->
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div
+                  id="liveToast"
+                  class="toast"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="toast-header">
+                    <strong class="me-auto fw-bold"
+                      >Joined PeakFinderPro Community</strong
+                    >
+
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="toast-body fw-bold">
+                    Welcome to the Community!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER SECTION -->
@@ -292,7 +285,6 @@
             <span><i class="text-white fs-4 me-4 bi bi-twitter-x"></i></span>
             <span><i class="text-white fs-4 bi bi-youtube"></i></span>
           </div>
-          
         </div>
       </div>
     </footer>
@@ -307,6 +299,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-
+    
   </body>
 </html>
