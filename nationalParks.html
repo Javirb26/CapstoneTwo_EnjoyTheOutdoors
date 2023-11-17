@@ -27,10 +27,15 @@
   </head>
 
   <body>
-    <!-- Navigation -->
+    <!-- NAVIGATION SECTION -->
     <nav class="navbar navbar-expand-md navbar-dark nav-bg sticky-top">
       <div class="container">
-        <a class="navbar-brand fs-3" href="#">PeakFinderPro</a>
+        <!-- Navbar Brand -->
+        <a class="navbar-brand fs-3" href="index.html">
+          <span>PeakFinderPro</span></a
+        >
+        
+        <!-- Mobile Hamburger Menu -->
         <button
           class="navbar-toggler"
           type="button"
@@ -42,7 +47,12 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navigation Links/Connection to Hamburger Menu -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+        <!-- Navigation Links -->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="index.html">HOME</a>
@@ -54,8 +64,11 @@
               <a class="nav-link" href="mountainInfo.html">INFO</a>
             </li>
           </ul>
+
         </div>
+        
       </div>
+
     </nav>
 
     <div class="park-map-img">
@@ -105,14 +118,21 @@
     <!-- CREATE UI THAT ALLOWS USERS TO SEARCH FOR THE PARK THAT IS JUST RIGHT FOR THEM.-->
     <main class="main-bg">
 
+      <!-- First Section Main Content -->
       <div class="container">
+        <!-- Search Info Content -->
         <div class="row g-5 py-5 justify-content-sm-center">
+          <!-- Search Info Text Content -->
+
           <div class="col-xl-5">
             <h2 class="text-center fw-bold">Effortless Park Exploration:</h2>
+
             <p class="text-center fs-4">
               With our user-friendly search options, explore parks by location or type. Find specific state parks or plan a road trip to discover national treasures. Whether you love hiking, wildlife, history, or scenic vistas, our 60+ national parks offer the ideal adventure. Join us in connecting with nature's wonders and fostering a vibrant community of outdoor enthusiasts!
             </p>
           </div>
+
+          <!-- Image for Mission Statement -->
           <div class="col-sm-9 col-xl-7">
             <img
               class="img-fluid rounded-3"
@@ -120,140 +140,173 @@
               alt=""
             />
           </div>
+
         </div>
       </div>
 
 
-      <div>
+        <!-- PARK SEARCH -->
         <div class="container">
-
+          <!-- Form container for PARK SEARCH -->
           <form class="pb-5">
+            <!-- PARK SEARCH  Content -->
             <div class="row everyOther-bg">
+               <!-- SEARCH LOCATION Text Content -->
               <div class="col-md-6 my-4 border-end rounded-1">
                 <h2 class="text-center fw-bold" id="findPark">
                   Find Park By:
                 </h2>
   
+                <!-- SELECT ELEMENT FOR: LOCATION -->
                 <select
                   name="selectNationalPark"
                   id="selectNationalPark"
                   class="form-control"
                 >
+                  <!-- Default Option -->
                   <option value="none">By Location...</option>
                 </select>
+
               </div>
+
+              <!-- SEARCH PARK TYPE Text Content -->
               <div class="col-md-6 my-4">
                 <h2 class="text-center fw-bold">Find Park By:</h2>
+
+                <!-- SELECT ELEMENT FOR: PARK TYPE -->
                 <select
                   name="selectParkType"
                   id="selectParkType"
                   class="form-control"
                 >
+                  <!-- Default Option -->
                   <option value="none">By Type...</option>
                 </select>
+
               </div>
+
             </div>
+
+            <!-- Container for Description to Be Populated BY JS -->
             <div class="mb-4 container">
               <ul id="description"></ul>
             </div>
+
           </form>
         </div>
-      </div>
 
-      <div class="pb-5">
-        <div class="container">
-          <h2 class="text-center mt-3">Join Us:</h2>
-          <p class="text-center fs-4 mt-4">
-            Join the PeakFinderPro Community Today: Embark on unforgettable
-            adventures, discover new mountains, and explore national parks like
-            never before. Let's celebrate the great outdoors together.
-          </p>
-          <form id="form-submit">
-            <label for="email"></label>
-            <input
-              class="form-control fs-4"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="PeakFinderPro@gmail.com"
-              required
-            />
-            <div class="text-center">
-              <button
-                class="btn btn-warning border-0 text-white mt-3 px-5 fs-4"
-                id="liveToastBtn"
-                type="submit"
-                value="Submit"
+      <!-- Join Us CTA Main Section -->
+    <div class="pb-5">
+      <!-- Join Us Content -->
+      <div class="container">
+
+        <!-- Join Us Text Content -->
+        <h2 class="text-center mt-3">Join Us:</h2>
+        <p class="text-center fs-4 mt-4">
+          Join the PeakFinderPro Community Today: Embark on unforgettable
+          adventures, discover new mountains, and explore national parks like
+          never before. Let's celebrate the great outdoors together.
+        </p>
+
+        <!-- Email Form To Join PeakFinderPro Community -->
+        <form id="form-submit">
+
+          <!-- Email Input Area -->
+          <label for="email"></label>
+          <input
+            class="form-control fs-4"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="PeakFinderPro@gmail.com"
+            required
+          />
+
+
+          <!-- Form Submit Button -->
+          <div class="text-center">
+            <button
+              class="btn btn-warning border-0 text-white mt-3 px-5 fs-4"
+              id="liveToastBtn"
+              type="submit"
+              value="Submit"
+            >
+              Submit
+            </button>
+
+            <!-- Bootstrap Pop up "Toast" -->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div
+                id="liveToast"
+                class="toast"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
               >
-                Submit
-              </button>
-
-              <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div
-                  id="liveToast"
-                  class="toast"
-                  role="alert"
-                  aria-live="assertive"
-                  aria-atomic="true"
-                >
-                  <div class="toast-header">
-                    
-                    <strong class="me-auto fw-bold">Joined PeakFinderPro Community</strong>
-                    
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="toast"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="toast-body fw-bold">
-                    Welcome to the Community!
-                  </div>
+                <div class="toast-header">
+                  
+                  <strong class="me-auto fw-bold">Joined PeakFinderPro Community</strong>
+                  
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="toast-body fw-bold">
+                  Welcome to the Community!
                 </div>
               </div>
             </div>
-          </form>
-        </div>
+
+          </div>
+
+
+        </form>
       </div>
+    </div>
       
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER SECTION -->
     <footer class="py-5 nav-bg">
       <div class="container">
+        <!-- Footer Content -->
         <div class="row d-flex align-items-center">
           <div class="col-md-4 h-100 text-center">
+            <!-- Footer Text Content -->
             <h1 class="text-white">PeakFinderPro</h1>
             <p class="text-white">
               <i class="bi bi-c-circle text-white"></i> Copyright 2023
             </p>
           </div>
 
+          <!-- Empty Center Div -->
           <div class="col-md-4 h-100 text-center"></div>
 
+          <!-- Footer Social Media Icon Content -->
           <div class="col-md-4 h-100 text-center">
             <h3 class="text-white text-center">Socials:</h3>
             <span><i class="text-white fs-4 me-4 bi bi-facebook"></i></span>
             <span><i class="text-white fs-4 me-4 bi bi-twitter-x"></i></span>
             <span><i class="text-white fs-4 bi bi-youtube"></i></span>
           </div>
+          
         </div>
       </div>
     </footer>
 
+    <!-- SCRIPTS -->
+    <script src="scripts/submit.js"></script>
+    <script src="scripts/nationalPark.js"></script>
 
-    <!-- bootstrap js cdn -->
+    <!-- Bootstrap JS CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
 
-    <!-- javascript file -->
-    <script src="scripts/submit.js"></script>
-    <script src="scripts/nationalPark.js"></script>
-
-    
   </body>
 </html>
