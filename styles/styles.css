@@ -22,9 +22,24 @@
 }
 
 .everyOther-bg {
-    background-color: antiquewhite
+    background-color: #FFE9CF;
 }
 
+.forest-bg {
+    background-color: #0B404B;
+}
+
+.orange-bg {
+    background-color: #D37A32;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #0B404B !important;
+}
+
+.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
+    background-color: #D37A32 !important;
+}
 
 /* Styles for Hero image container */
 .jumbo-container{
