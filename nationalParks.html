@@ -164,13 +164,54 @@
         <div class="container">
           <h2 class="text-center mt-3">Join Us:</h2>
           <p class="text-center fs-4 mt-4">
-            Join the PeakFinderPro Community Today: Embark on unforgettable adventures, discover new mountains, and explore national parks like never before. Let's celebrate the great outdoors together.
+            Join the PeakFinderPro Community Today: Embark on unforgettable
+            adventures, discover new mountains, and explore national parks like
+            never before. Let's celebrate the great outdoors together.
           </p>
-          <form action="">
+          <form id="form-submit">
             <label for="email"></label>
-            <input class="form-control fs-4" type="email" id="email" name="email" placeholder="PeakFinderPro@gmail.com" required>
+            <input
+              class="form-control fs-4"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="PeakFinderPro@gmail.com"
+              required
+            />
             <div class="text-center">
-              <input class="btn btn-warning border-0 text-white mt-3 px-5 fs-4" type="submit" value="Submit">
+              <button
+                class="btn btn-warning border-0 text-white mt-3 px-5 fs-4"
+                id="liveToastBtn"
+                type="submit"
+                value="Submit"
+              >
+                Submit
+              </button>
+
+              <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                <div
+                  id="liveToast"
+                  class="toast"
+                  role="alert"
+                  aria-live="assertive"
+                  aria-atomic="true"
+                >
+                  <div class="toast-header">
+                    
+                    <strong class="me-auto fw-bold">Joined PeakFinderPro Community</strong>
+                    
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="toast"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="toast-body fw-bold">
+                    Welcome to the Community!
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -231,8 +272,6 @@
 
     <!-- javascript file -->
     <script src="scripts/nationalPark.js"></script>
-    <script src="scripts/nationalParkData.js"></script>
-    <script src="scripts/locationData.js"></script>
-    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/submit.js"></script>
   </body>
 </html>
